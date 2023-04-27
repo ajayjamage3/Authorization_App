@@ -64,7 +64,7 @@ app.get("/auth/github",async(req,res)=>{
                             if(result){
                                 const token = jwt.sign({clientId:client[0]._id},process.env.key)
                                 // res.send({"msg":"token generated","token":token})
-                                res.redirect(`http://127.0.0.1:5501/unit-7/sprint-3/evaluation/Authentication%20App/index.html?token=${token}`)
+                                res.redirect(`https://poetic-sawine-f20080.netlify.app/?token=${token}`)
                             }else{
                                 res.send({"status":"Wrong Password"})
                             }
